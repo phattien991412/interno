@@ -30,7 +30,7 @@ const DoResult = () => {
               <h1>{item.title}</h1>
               <p className="py-8">{item.text}</p>
 
-              <Button color={"#292F36"} text={item.tags} />
+              <Button color={"#292F36"} icon={"#CDA274"} text={item.tags} /> 
             </div>
             <div className="w-[90%] lg:w-[55%]">
               <BlurredImage

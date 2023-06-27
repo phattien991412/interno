@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
+  const route = useRouter();
   return (
-    <div className="relative w-full">
+    <div>
       <Header />
       <main>{children}</main>
-      <Footer />
+      {route.pathname !== "/404" && <Footer />}
     </div>
   );
 };

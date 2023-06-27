@@ -8,7 +8,7 @@ const Contact = () => {
         <h1>Wanna join the interno?</h1>
         <p>It is a long established fact will be distracted.</p>
         <div className="flex justify-center mt-8">
-          <Button color={"#CDA274"} text={"Contact With Us"} />
+          <Button color={"#CDA274"} icon={"#292F36"} text={"Contact With Us"} />
         </div>
       </div>
     </div>

@@ -4,19 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-#__next {
-  @apply h-full;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  @apply h-full;
-}
 
 html *::-webkit-scrollbar {
   width: 9px;

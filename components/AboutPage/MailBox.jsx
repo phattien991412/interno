@@ -17,7 +17,7 @@ const MailBox = () => {
         </div>
 
         <div className="grid place-items-center">
-            <Button color={"#292F36"} text={"Send Now"} />
+            <Button color={"#292F36"} icon={"#CDA274"} text={"Send Now"} />
         </div>
       </form>
     </div>

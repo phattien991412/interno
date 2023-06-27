@@ -28,7 +28,7 @@ const About = () => {
             <span>Call Us Anytime</span>
           </p>
         </div>
-        <Button color={"#292F36"} text={"Get Free Estimate"} />
+        <Button color={"#292F36"} icon={"#CDA274"} text={"Get Free Estimate"} />
       </div>
       <BlurredImage src={"/images/about.png"} width={500} height={500} alt={"about us"} className="rounded-tr-[320px] rounded-bl-[110px]" />
     </div>

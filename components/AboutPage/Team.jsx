@@ -9,11 +9,11 @@ import BlurredImage from "../LazyLoading";
 const Team = () => {
   const data = [
     {
-      name: "Patrick Evans",
+      name: "Charlotte	Levi",
       desc: "Developer, Australia",
       phone: "+1 (378) 400-1234",
       image: "/images/aboutpeople1.png",
-      email: "evans@gmail.com"
+      email: "levi@gmail.com"
     },
     {
       name: "Nattasha Julie",
@@ -23,11 +23,11 @@ const Team = () => {
       email: "julie@gmail.com"
     },
     {
-      name: "Raymond Galario",
+      name: "Nora Owen",
       desc: "Design, Australia",
       phone: "+1 (378) 400-1234",
       image: "/images/aboutpeople3.png",
-      email: "galario@gmail.com"
+      email: "owen@gmail.com"
     }
   ];
   return (
