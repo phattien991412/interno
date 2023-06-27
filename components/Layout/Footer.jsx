@@ -1,5 +1,6 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+
 import { AiOutlineTwitter } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";

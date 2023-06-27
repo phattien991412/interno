@@ -1,10 +1,9 @@
 import React from "react";
-import Image from "next/image";
 
 import { BsTelephone } from "react-icons/bs";
 
-import Button from "../Button";
 import BlurredImage from "../LazyLoading";
+import Button from "../ReusedComponent/Button";
 
 const About = () => {
  
@@ -31,7 +30,7 @@ const About = () => {
         </div>
         <Button color={"#292F36"} text={"Get Free Estimate"} />
       </div>
-      <BlurredImage url={"/images/about.png"} width={500} height={500} alt={"about us"} className="rounded-tr-[320px] rounded-bl-[110px]" />
+      <BlurredImage src={"/images/about.png"} width={500} height={500} alt={"about us"} className="rounded-tr-[320px] rounded-bl-[110px]" />
     </div>
   );
 };

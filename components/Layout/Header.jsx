@@ -1,8 +1,9 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
-import { FiSearch } from "react-icons/fi"
 import { FaBars } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi"
 
 const Header = () => {
   return (
@@ -15,22 +16,22 @@ const Header = () => {
       </div>
       <ul className="xl:flex gap-10 text-center items-center text-xl hidden">
         <li>
-          <a href="#home">Home</a>
+          <Link href="/">Home</Link>
         </li>
         <li>
-          <a href="#page">Pages</a>
+          <Link href="/page">Pages</Link>
         </li>
         <li>
-          <a href="#service">Services</a>
+          <Link href="/service">Services</Link>
         </li>
         <li>
-          <a href="#project">Project</a>
+          <Link href="/project">Project</Link>
         </li>
         <li>
-          <a href="#blog">Blog</a>
+          <Link href="/blog">Blog</Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link href="/contact">Contact</Link>
         </li>
         <li><FiSearch/></li>
       </ul>

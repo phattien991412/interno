@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-const BlurredImage = ({url, alt, width, height, className}) => {
+const BlurredImage = ({src, alt, width, height, className}) => {
   const blurredImageDivRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -25,7 +25,7 @@ const BlurredImage = ({url, alt, width, height, className}) => {
 
   return (
     <div className="blur-img" ref={blurredImageDivRef}>
-      <Image className={className} width={width} height={height} src={url} alt={alt} ref={imgRef} />
+      <Image className={className} width={width} height={height} src={src} alt={alt} ref={imgRef} />
     </div>
   );
 };
