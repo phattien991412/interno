@@ -1,27 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+#__next {
+  @apply h-full;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  @apply h-full;
+}
+
+html *::-webkit-scrollbar {
+  width: 9px;
+}
+
+html *::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html *::-webkit-scrollbar-thumb {
+  background-color: rgb(131, 166, 209);
+  border-radius: 4px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Jost", sans-serif;
+  scroll-behavior: smooth;
+  color: #292f36;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 125%;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 125%;
+  letter-spacing: .5px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 22px;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+img,
+picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.readmore {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #CDA274;
+    border-radius: 4px;
+    scale: 0 1;
+    transform-origin: right;
+    transition: scale 0.25s;
+  }
+
+  &:hover::before {
+    scale: 1;
+    transform-origin: left;
+  }
+}
+
+.blur-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blur-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: pulse 2.5s infinite;
+  background-color: var(--text-color);
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.blur-img.loaded::before {
+  animation: none;
+  content: none;
+}
+
+.blur-img img {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+.blur-img.loaded img {
+  opacity: 1;
+}
+
+
+.count {
+  width: 100% !important;
 }
