@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../ReusedComponent/Button";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -15,7 +16,9 @@ const Home = () => {
           There are many variations of the passages of lorem Ipsum
           fromavailable, majority.
         </p>
+        <Link href={"/service"}>
         <Button color={"#292F36"} icon={"#CDA274"} text={"Get Started"} />
+        </Link>
       </div>
     </div>
   );

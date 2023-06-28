@@ -1,10 +1,11 @@
 import React from "react";
 
 import { BsInstagram } from "react-icons/bs";
-import { AiOutlineTwitter } from "react-icons/ai";
+import { AiOutlineArrowRight, AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 import BlurredImage from "../LazyLoadingImage";
+import Link from "next/link";
 
 const Team = () => {
   const data = [
@@ -32,17 +33,22 @@ const Team = () => {
   ];
   return (
     <div className="bg-primaryColor3 w-full">
-      <div className="p-8 lg:p-36">
-        <h1 className="text-center">
-          What the People Thinks <br />
-          About Us
-        </h1>
+      <div className="p-8 lg:p-28">
+        <h1 className="text-center">Our Professional Team</h1>
 
         <div className="block lg:flex justify-between items-center gap-12 w-[90%] xl:w-[70%] mx-auto mt-16">
           {data.map((item) => (
-            <div key={item.name} className="card overflow-hidden mb-12 lg:mb-0 mx-auto">
+            <div
+              key={item.name}
+              className="card overflow-hidden mb-12 lg:mb-0 mx-auto"
+            >
               <div className="first-content">
-                <BlurredImage width={300} height={400} src={item.image} alt="avatar"/>
+                <BlurredImage
+                  width={300}
+                  height={400}
+                  src={item.image}
+                  alt="avatar"
+                />
               </div>
               <div className="second-content flex flex-col justify-around p-4 text-white ">
                 <div>
@@ -73,6 +79,11 @@ const Team = () => {
             </div>
           ))}
         </div>
+        <Link href={"/team"}>
+          <h3 className="readmore w-fit mx-auto mt-16 cursor-pointer flex items-center gap">
+            Visit our team <AiOutlineArrowRight />
+          </h3>
+        </Link>
       </div>
     </div>
   );

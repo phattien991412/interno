@@ -2,6 +2,7 @@ import React from "react";
 
 import BlurredImage from "../LazyLoadingImage";
 import Button from "../ReusedComponent/Button";
+import Link from "next/link";
 
 const DoResult = () => {
   const data = [
@@ -9,13 +10,15 @@ const DoResult = () => {
       title: "What We Do",
       text: "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.",
       tags: "Our Concept",
-      image: "/images/aboutwedo.png"
+      image: "/images/aboutwedo.png",
+      link: "/service"
     },
     {
       title: "The End Result",
       text: "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.",
       tags: "Our Concept",
-      image: "/images/aboutresult.png"
+      image: "/images/aboutresult.png",
+      link: "/project"
     }
   ];
   return (
@@ -30,7 +33,9 @@ const DoResult = () => {
               <h1>{item.title}</h1>
               <p className="py-8">{item.text}</p>
 
-              <Button color={"#292F36"} icon={"#CDA274"} text={item.tags} /> 
+              <Link href={item.link}>
+                <Button color={"#292F36"} icon={"#CDA274"} text={item.tags} />
+              </Link>
             </div>
             <div className="w-[90%] lg:w-[55%]">
               <BlurredImage

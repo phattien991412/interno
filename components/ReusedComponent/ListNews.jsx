@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { AiOutlineRight } from "react-icons/ai";
 
@@ -30,13 +31,15 @@ const ListNews = ({ data }) => {
               </h3>
               <div className="flex justify-between items-center text-base pb-2">
                 <p>26 December,2022 </p>
-                <p
-                  className={`${
-                    index % 2 !== 0 ? "bg-white" : "bg-primaryColor3"
-                  } grid place-items-center w-[52px] h-[52px] rounded-full hover:bg-primaryColor1 hover:text-white cursor-pointer transition-all duration-500`}
-                >
-                  <AiOutlineRight />
-                </p>
+                <Link href={"/blog"}>
+                  <p
+                    className={`${
+                      index % 2 !== 0 ? "bg-white" : "bg-primaryColor3"
+                    } grid place-items-center w-[52px] h-[52px] rounded-full hover:bg-primaryColor1 hover:text-white cursor-pointer transition-all duration-500`}
+                  >
+                    <AiOutlineRight />
+                  </p>
+                </Link>
               </div>
             </div>
           </div>

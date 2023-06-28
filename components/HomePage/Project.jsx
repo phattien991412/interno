@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import { AiOutlineRight } from "react-icons/ai";
+import Link from "next/link";
 
 const Project = () => {
   const data = [
@@ -57,9 +58,11 @@ const Project = () => {
                 <p className="font-semibold">{item.type}</p>
                 <p className="text-base">{item.category}</p>
               </div>
-              <p className="grid place-items-center w-[70px] h-[70px] rounded-full bg-primaryColor3">
-                <AiOutlineRight />
-              </p>
+              <Link href={"/project"}>
+                <p className="grid place-items-center w-[70px] h-[70px] rounded-full bg-primaryColor3 hover:bg-primaryColor1 hover:text-white cursor-pointer transition-all duration-500">
+                  <AiOutlineRight />
+                </p>
+              </Link>
             </div>
           </div>
         ))}
