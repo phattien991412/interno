@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import "@/styles/globals.css";
+import Loading from "@/components/ReusedComponent/Loading";
 
 export default function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
@@ -16,19 +17,17 @@ export default function App({ Component, pageProps }) {
     };
 
     const handleComplete = () => {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 1500)
+      setIsLoading(false);
     };
 
-    router.events.on('routeChangeStart', handleStart);
-    router.events.on('routeChangeComplete', handleComplete);
-    router.events.on('routeChangeError', handleComplete);
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
 
     return () => {
-      router.events.off('routeChangeStart', handleStart);
-      router.events.off('routeChangeComplete', handleComplete);
-      router.events.off('routeChangeError', handleComplete);
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleComplete);
+      router.events.off("routeChangeError", handleComplete);
     };
   }, []);
   return (
@@ -41,7 +40,7 @@ export default function App({ Component, pageProps }) {
         <meta name="description" content="Metaversus Madness" />
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
       </Head>
-      {isLoading && <div className="text-[10rem]">Loading...</div>}
+      {isLoading && <Loading />}
       {getLayout(<Component {...pageProps} />)}
     </>
   );

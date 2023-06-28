@@ -86,11 +86,11 @@ const Footer = () => {
 
         <div className="md:col-span-1 col-span-2">
           <h3>Contact</h3>
-          <p>55 East Birchwood Ave. Brooklyn, New York 11201</p>
-          <a className="my-8" href="mailto:contact@interno.com">
+          <p className="my-6">55 East Birchwood Ave. Brooklyn, New York 11201</p>
+          <a className="my-6" href="mailto:contact@interno.com">
             <p>contact@interno.com</p>
           </a>
-          <a href="tel:+1234567890">
+          <a className="my-6" href="tel:+1234567890">
             <p>(123) 456 - 7890</p>
           </a>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import BlurredImage from "../LazyLoading";
+import BlurredImage from "../LazyLoadingImage";
 import Button from "../ReusedComponent/Button";
 import Image from "next/image";
 
@@ -46,10 +46,10 @@ const Work = () => {
       <>
         {data.map((item, index) => (
           <div
-            className="flex lg:justify-between flex-wrap lg:flex-nowrap items-center gap-12 lg:even:flex-row-reverse mb-24"
+            className="flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24"
             key={item.title}
           >
-            <div className="w-[90%] lg:w-1/2 px-8">
+            <div className="w-[90%] lg:w-1/2 px-16">
               <div className="flex justify-between items-center">
                 <div>
                   <Image width={50} height={50} src={item.icon} alt="icon" />
@@ -64,8 +64,8 @@ const Work = () => {
             <div className="w-[90%] lg:w-1/2">
               <BlurredImage
                 className="rounded-bl-[400px]"
-                width={500}
-                height={400}
+                width={400}
+                height={500}
                 src={item.image}
                 alt={item.title}
               />

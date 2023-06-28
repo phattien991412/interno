@@ -2,7 +2,7 @@ import React from "react";
 
 import { BsTelephone } from "react-icons/bs";
 
-import BlurredImage from "../LazyLoading";
+import BlurredImage from "../LazyLoadingImage";
 import Button from "../ReusedComponent/Button";
 
 const About = () => {

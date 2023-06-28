@@ -1,6 +1,6 @@
 import React from "react";
 
-import BlurredImage from "../LazyLoading";
+import BlurredImage from "../LazyLoadingImage";
 import Button from "../ReusedComponent/Button";
 
 const DoResult = () => {
@@ -23,10 +23,10 @@ const DoResult = () => {
       <>
         {data.map((item) => (
           <div
-            className="flex lg:justify-between flex-wrap lg:flex-nowrap items-center gap-12  lg:even:flex-row-reverse mb-24"
+            className="flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24"
             key={item.title}
           >
-            <div className="w-[90%] lg:w-[45%]">
+            <div className="w-[90%] lg:w-[45%] px-16">
               <h1>{item.title}</h1>
               <p className="py-8">{item.text}</p>
 
