@@ -1,13 +1,15 @@
 import React from "react";
-import Home from "./Home";
-import Work from "./Work";
-import About from "./About";
-import Testimonial from "./Testimonial";
-import Brand from "./Brand";
-import Project from "./Project";
-import Count from "./Count";
-import Blog from "./Blog";
-import Contact from "./Contact";
+import dynamic from "next/dynamic";
+
+const Home = dynamic(() => import("./Home"));
+const Work = dynamic(() => import("./Work"));
+const Blog = dynamic(() => import("./Blog"));
+const About = dynamic(() => import("./About"));
+const Brand = dynamic(() => import("./Brand"));
+const Count = dynamic(() => import("./Count"));
+const Project = dynamic(() => import("./Project"));
+const Contact = dynamic(() => import("./Contact"));
+const Testimonial = dynamic(() => import("./Testimonial"));
 
 const HomePage = () => {
   return (
@@ -23,7 +25,7 @@ const HomePage = () => {
       <Count />
       <div className="xl:w-[70%] w-[90%] mx-auto">
         <Blog />
-        <Contact/>
+        <Contact />
       </div>
     </>
   );

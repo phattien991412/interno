@@ -92,7 +92,7 @@ picture {
   display: block;
 }
 
-.readmore {
+.readmore, .nav li {
   position: relative;
 
   &::before {
@@ -174,7 +174,7 @@ picture {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 53%;
+  width: 45%;
   height: 110%;
   background: white;
   z-index: 1;

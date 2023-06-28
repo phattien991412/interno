@@ -45,19 +45,19 @@ const Footer = () => {
         <div className="md:col-span-1 col-span-3">
           <h3>Pages</h3>
           <ul>
-            <li className="my-6">
+            <li className="my-6 cursor-pointer hover:underline">
               <p>About Us</p>
             </li>
-            <li className="my-6">
+            <li className="my-6 cursor-pointer hover:underline">
               <p>Our Projects</p>
             </li>
-            <li className="my-6">
+            <li className="my-6 cursor-pointer hover:underline">
               <p>Our Team</p>
             </li>
-            <li className="my-6">
+            <li className="my-6 cursor-pointer hover:underline">
               <p>Contact Us</p>
             </li>
-            <li className="my-6">
+            <li className="my-6 cursor-pointer hover:underline">
               <p>Services</p>
             </li>
           </ul>
@@ -66,19 +66,19 @@ const Footer = () => {
         <div className="md:col-span-1 col-span-2">
           <h3>Services</h3>
           <ul>
-            <li className="my-6">
+            <li className="my-6 cursor-pointer hover:underline">
               <p>Kitchen</p>
             </li>
-            <li className="my-6">
+            <li className="my-6 cursor-pointer hover:underline">
               <p>Living Area</p>
             </li>
-            <li className="my-6">
+            <li className="my-6 cursor-pointer hover:underline">
               <p>Bathroom</p>
             </li>
-            <li className="my-6">
+            <li className="my-6 cursor-pointer hover:underline">
               <p>Dinning Hall</p>
             </li>
-            <li className="my-6">
+            <li className="my-6 cursor-pointer hover:underline">
               <p>Bedroom</p>
             </li>
           </ul>

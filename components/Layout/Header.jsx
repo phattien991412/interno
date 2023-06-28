@@ -22,12 +22,12 @@ const Header = () => {
           <h2 className="text-[40px] font-semibold">Interno</h2>
         </div>
       </Link>
-      <ul className="xl:flex gap-10 text-center items-center text-xl hidden">
+      <ul className="nav xl:flex gap-10 text-center items-center text-xl hidden">
         <li>
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/page">Pages</Link>
+          <Link href="/about">About Us</Link>
         </li>
         <li>
           <Link href="/service">Services</Link>
@@ -41,9 +41,9 @@ const Header = () => {
         <li>
           <Link href="/contact">Contact</Link>
         </li>
-        <li>
+        {/* <li>
           <FiSearch />
-        </li>
+        </li> */}
       </ul>
       <p className="xl:hidden block">
         <FaBars />

@@ -9,7 +9,7 @@ const Quotes = () => {
         <p className="flex justify-center">
           <BiSolidQuoteAltLeft />
         </p>
-        <h2 className="py-8 text-3xl lg:text-[50px] leading-[125%]">
+        <h2 className="py-8 text-3xl lg:text-[40px] leading-[125%]">
           <i>I like an interior that defies labeling. I don't really want someone
           to walk into a room and know that I did it</i>
         </h2>

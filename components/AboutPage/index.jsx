@@ -1,10 +1,12 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 
-import Team from './Team';
-import Quotes from './Quotes';
-import MailBox from './MailBox';
-import DoResult from './DoResult';
-import Banner from '../ReusedComponent/Banner';
+const Team = dynamic(() => import("./Team"));
+const Quotes = dynamic(() => import("./Quotes"));
+const MailBox = dynamic(() => import("./MailBox"));
+const DoResult = dynamic(() => import("./DoResult"));
+const Banner = dynamic(() => import("../ReusedComponent/Banner"));
+
 
 const AboutPage = () => {
     return (
