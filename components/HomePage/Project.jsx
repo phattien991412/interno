@@ -59,7 +59,7 @@ const Project = () => {
                 <p className="font-semibold">{item.type}</p>
                 <p className="text-base">{item.category}</p>
               </div>
-              <Link href={"/project"}>
+              <Link href={"/project"} passHref >
                 <p className="grid place-items-center w-[70px] h-[70px] rounded-full bg-primaryColor3 hover:bg-primaryColor1 hover:text-white cursor-pointer transition-all duration-500">
                   <AiOutlineRight />
                 </p>

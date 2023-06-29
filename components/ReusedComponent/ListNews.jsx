@@ -33,7 +33,7 @@ const ListNews = ({ data }) => {
               </h3>
               <div className="flex justify-between items-center text-base pb-2">
                 <p>26 December,2022 </p>
-                <Link href={"/blog"}>
+                <Link href={"/blog"} passHref >
                   <p
                     className={`${
                       index % 2 !== 0 ? "bg-white" : "bg-primaryColor3"

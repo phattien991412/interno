@@ -79,7 +79,7 @@ const Team = () => {
             </div>
           ))}
         </div>
-        <Link href={"/team"}>
+        <Link href={"/team"} passHref >
           <h3 className="readmore w-fit mx-auto mt-16 cursor-pointer flex items-center gap">
             Visit our team <AiOutlineArrowRight />
           </h3>

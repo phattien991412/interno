@@ -14,7 +14,7 @@ export default function Page404() {
           We are sorry, but
           the page you requested was not found.
         </h3>
-        <Link href={"/"}>
+        <Link href={"/"} passHref >
           <Button color={"#292F36"} icon={"#CDA274"} text={"Back To Home"} />
         </Link>
       </div>

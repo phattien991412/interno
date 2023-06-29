@@ -33,7 +33,7 @@ const DoResult = () => {
               <h1>{item.title}</h1>
               <p className="py-8">{item.text}</p>
 
-              <Link href={item.link}>
+              <Link href={item.link} passHref >
                 <Button color={"#292F36"} icon={"#CDA274"} text={item.tags} />
               </Link>
             </div>

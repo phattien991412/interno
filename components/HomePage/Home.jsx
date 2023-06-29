@@ -19,7 +19,7 @@ const Home = () => {
           There are many variations of the passages of lorem Ipsum
           fromavailable, majority.
         </p>
-        <Link href={"/service"}>
+        <Link href={"/service"} passHref >
           <Button color={"#292F36"} icon={"#CDA274"} text={"Get Started"} />
         </Link>
       </div>

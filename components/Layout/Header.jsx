@@ -50,7 +50,7 @@ const Header = () => {
   ];
   return (
     <nav className="flex justify-between items-center my-10 xl:w-[70%] w-[90%] mx-auto">
-      <Link href={"/"}>
+      <Link href={"/"} passHref >
         <div className="flex items-center gap-2 ">
           <div className="cursor-pointer">
             <BlurredImage
@@ -72,7 +72,7 @@ const Header = () => {
               item.title === select && "border-b-2 border-primaryColor1"
             }`}
           >
-            <Link href={item.link}>{item.title}</Link>
+            <Link href={item.link} passHref >{item.title}</Link>
           </li>
         ))}
       </ul>
@@ -91,7 +91,7 @@ const Header = () => {
           <ul className=" text-xl ">
             {nav.map((item) => (
               <li className="my-4">
-                <Link href={item.link}>{item.title}</Link>
+                <Link href={item.link} passHref >{item.title}</Link>
               </li>
             ))}
           </ul>
