@@ -1,5 +1,6 @@
-import Image from "next/image";
 import React from "react";
+
+import BlurredImage from "../LazyLoadingImage";
 
 const Testimonial = () => {
   const data = [
@@ -10,13 +11,13 @@ const Testimonial = () => {
       text: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been."
     },
     {
-      avatar: "/images/ray.png",
+      avatar: "/images/ray.webp",
       name: "Raymond Galario",
       location: "Sydney, Australia",
       text: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled it to make a type book."
     },
     {
-      avatar: "/images/ben.png",
+      avatar: "/images/ben.webp",
       name: "Benny Roll",
       location: "Sydney, New York",
       text: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled."
@@ -32,7 +33,7 @@ const Testimonial = () => {
           <div className="bg-white rounded-3xl p-8 mb-8 lg:mb-0" key={item.name}>
             <div className="flex items-center gap-8 pb-8">
               <div className="w-[15%]">
-                <Image
+                <BlurredImage
                   className="rounded-full"
                   width={50}
                   height={50}

@@ -23,7 +23,7 @@ const Question = () => {
             className={"rounded-mainRadius"}
             width={400}
             height={400}
-            src={"/images/faq-img1.png"}
+            src={"/images/faq-img1.webp"}
             alt={"faq"}
           />
         </div>

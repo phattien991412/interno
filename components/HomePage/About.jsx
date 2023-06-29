@@ -31,7 +31,7 @@ const About = () => {
         </div>
         <Link href={"/contact"}><Button color={"#292F36"} icon={"#CDA274"} text={"Get Free Estimate"} /></Link>
       </div>
-      <BlurredImage src={"/images/about.png"} width={500} height={500} alt={"about us"} className="rounded-tr-[320px] rounded-bl-[110px]" />
+      <BlurredImage src={"/images/about.webp"} width={500} height={500} alt={"about us"} className="rounded-tr-[320px] rounded-bl-[110px]" />
     </div>
   );
 };

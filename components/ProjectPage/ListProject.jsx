@@ -25,37 +25,37 @@ const ListProject = () => {
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project2.1.png",
+          image: "/images/project2.1.webp",
           title: "Minimal Bathroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project3.1.png",
+          image: "/images/project3.1.webp",
           title: "Minimal Bathroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project4.1.png",
+          image: "/images/project4.1.webp",
           title: "Minimal Bathroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project5.png",
+          image: "/images/project5.webp",
           title: "Minimal Bathroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project6.png",
+          image: "/images/project6.webp",
           title: "Minimal Bathroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project7.png",
+          image: "/images/project7.webp",
           title: "Minimal Bathroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project8.png",
+          image: "/images/project8.webp",
           title: "Minimal Bathroom",
           tag: "Decor / Artchitecture"
         }
@@ -75,37 +75,37 @@ const ListProject = () => {
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project2.1.png",
+          image: "/images/project2.1.webp",
           title: "Minimal Bedroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project3.1.png",
+          image: "/images/project3.1.webp",
           title: "Minimal Bedroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project4.1.png",
+          image: "/images/project4.1.webp",
           title: "Minimal Bedroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project5.png",
+          image: "/images/project5.webp",
           title: "Minimal Bedroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project6.png",
+          image: "/images/project6.webp",
           title: "Minimal Bedroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project7.png",
+          image: "/images/project7.webp",
           title: "Minimal Bedroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project8.png",
+          image: "/images/project8.webp",
           title: "Minimal Bedroom",
           tag: "Decor / Artchitecture"
         }
@@ -115,42 +115,42 @@ const ListProject = () => {
       type: "Kitchen",
       data: [
         {
-          image: "/images/project1.png",
+          image: "/images/project1.webp",
           title: "Minimal Kitchen",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project1.png",
+          image: "/images/project1.webp",
           title: "Minimal Kitchen",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project2.png",
+          image: "/images/project2.webp",
           title: "Minimal Kitchen",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project3.png",
+          image: "/images/project3.webp",
           title: "Minimal Kitchen",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project4.png",
+          image: "/images/project4.webp",
           title: "Minimal Kitchen",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/article1.png",
+          image: "/images/article1.webp",
           title: "Minimal Kitchen",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/article2.png",
+          image: "/images/article2.webp",
           title: "Minimal Kitchen",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/article3.png",
+          image: "/images/article3.webp",
           title: "Minimal Kitchen",
           tag: "Decor / Artchitecture"
         }
@@ -170,37 +170,37 @@ const ListProject = () => {
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project2.1.png",
+          image: "/images/project2.1.webp",
           title: "Minimal Living Area",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project3.1.png",
+          image: "/images/project3.1.webp",
           title: "Minimal Living Area",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project4.1.png",
+          image: "/images/project4.1.webp",
           title: "Minimal Living Area",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project5.png",
+          image: "/images/project5.webp",
           title: "Minimal Living Area",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project6.png",
+          image: "/images/project6.webp",
           title: "Minimal Living Area",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project7.png",
+          image: "/images/project7.webp",
           title: "Minimal Living Area",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project8.png",
+          image: "/images/project8.webp",
           title: "Minimal Living Area",
           tag: "Decor / Artchitecture"
         }

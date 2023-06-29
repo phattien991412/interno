@@ -1,9 +1,10 @@
 import React from "react";
-import Image from "next/image";
 
-import { AiOutlineTwitter } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
+import { AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+
+import BlurredImage from "../LazyLoadingImage";
 
 const Footer = () => {
   return (
@@ -12,11 +13,11 @@ const Footer = () => {
         <div className="col-span-5 md:col-span-2">
           <div className="flex gap-2 ">
             <div>
-              <Image
+              <BlurredImage
                 className="object-scale-down"
                 width={30}
                 height={30}
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="logo"
               />
             </div>

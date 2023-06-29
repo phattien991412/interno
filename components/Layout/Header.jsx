@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
-import { Button, Drawer } from "antd";
+import { Drawer } from "antd";
 
 import { FaBars } from "react-icons/fa";
+
+import BlurredImage from "../LazyLoadingImage";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -50,13 +51,13 @@ const Header = () => {
   return (
     <nav className="flex justify-between items-center my-10 xl:w-[70%] w-[90%] mx-auto">
       <Link href={"/"}>
-        <div className="flex gap-2 ">
+        <div className="flex items-center gap-2 ">
           <div className="cursor-pointer">
-            <Image
+            <BlurredImage
               className="object-scale-down"
               width={30}
               height={30}
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="logo"
             />
           </div>
@@ -82,7 +83,7 @@ const Header = () => {
 
         <Drawer
           className="w-1/2 h-screen"
-          title="Basic Drawer"
+          title="Interno"
           placement="left"
           onClose={onClose}
           open={open}

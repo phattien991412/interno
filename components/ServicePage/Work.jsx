@@ -1,7 +1,5 @@
 import React from "react";
 import BlurredImage from "../LazyLoadingImage";
-import Button from "../ReusedComponent/Button";
-import Image from "next/image";
 
 const Work = () => {
   const data = [
@@ -9,29 +7,29 @@ const Work = () => {
       title: "Concept & Details",
       text: "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.",
       tags: "Our Concept",
-      image: "/images/work1.png",
-      icon: "/images/icon.png"
+      image: "/images/work1.webp",
+      icon: "/images/icon.webp"
     },
     {
       title: "Idea for Work",
       text: "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.",
       tags: "Our Concept",
-      image: "/images/work2.png",
-      icon: "/images/icon1.png"
+      image: "/images/work2.webp",
+      icon: "/images/icon1.webp"
     },
     {
       title: "Design",
       text: "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.",
       tags: "Our Concept",
-      image: "/images/work3.png",
-      icon: "/images/icon2.png"
+      image: "/images/work3.webp",
+      icon: "/images/icon2.webp"
     },
     {
       title: "Perfection",
       text: "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.",
       tags: "Our Concept",
-      image: "/images/work4.png",
-      icon: "/images/icon3.png"
+      image: "/images/work4.webp",
+      icon: "/images/icon3.webp"
     }
   ];
   return (
@@ -52,7 +50,7 @@ const Work = () => {
             <div className="w-[90%] lg:w-1/2 px-16">
               <div className="flex justify-between items-center">
                 <div>
-                  <Image width={50} height={50} src={item.icon} alt="icon" />
+                  <BlurredImage width={50} height={50} src={item.icon} alt="icon" />
                 </div>
                 <p className="text-[120px] text-white"> 0{index + 1} </p>
               </div>

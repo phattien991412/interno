@@ -6,7 +6,7 @@ import Article from './Articles';
 const index = () => {
     return (
         <div>
-            <Banner image={"/images/blog-banner.png"} page={"Articles & News"} />
+            <Banner image={"/images/blog-banner.webp"} page={"Articles & News"} />
             <div className="xl:w-[70%] w-[90%] mx-auto">
                 <LastestNews/>
                 <Article/>

@@ -10,7 +10,7 @@ const Contact = dynamic(() => import('../HomePage/Contact'));
 const ServicePage = () => {
     return (
         <div>
-            <Banner image={"/images/service-banner.png"} page={"Services"} />
+            <Banner image={"/images/service-banner.webp"} page={"Services"} />
             <div className="xl:w-[70%] w-[90%] mx-auto">
                 <Services/>
                 <Work/>

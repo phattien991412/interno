@@ -1,6 +1,8 @@
-import Image from "next/image";
 import React from "react";
+
 import { AiOutlineRight } from "react-icons/ai";
+
+import BlurredImage from "../LazyLoadingImage";
 
 const LastestNews = () => {
   return (
@@ -8,7 +10,7 @@ const LastestNews = () => {
       <h1 className="pb-7">Latest Post</h1>
       <div className="block lg:grid grid-cols-2 items-center border rounded-[62px] p-8">
         <div className="mb-8 lg:mb-0">
-          <Image
+          <BlurredImage
             className="rounded-[62px]"
             width={500}
             height={500}

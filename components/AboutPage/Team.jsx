@@ -13,21 +13,21 @@ const Team = () => {
       name: "Charlotte	Levi",
       desc: "Developer, Australia",
       phone: "+1 (378) 400-1234",
-      image: "/images/aboutpeople1.png",
+      image: "/images/aboutpeople1.webp",
       email: "levi@gmail.com"
     },
     {
       name: "Nattasha Julie",
       desc: "Design, Australia",
       phone: "+1 (378) 400-1234",
-      image: "/images/aboutpeople2.png",
+      image: "/images/aboutpeople2.webp",
       email: "julie@gmail.com"
     },
     {
       name: "Nora Owen",
       desc: "Design, Australia",
       phone: "+1 (378) 400-1234",
-      image: "/images/aboutpeople3.png",
+      image: "/images/aboutpeople3.webp",
       email: "owen@gmail.com"
     }
   ];

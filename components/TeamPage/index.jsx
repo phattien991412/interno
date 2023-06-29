@@ -5,7 +5,7 @@ import TeamMembers from './TeamMembers';
 const TeamPage = () => {
     return (
         <div>
-            <Banner page={"Our Professional"} image={"/images/team-banner.png"} />
+            <Banner page={"Our Professional"} image={"/images/team-banner.webp"} />
             <div className="xl:w-[70%] w-[90%] mx-auto">
                 <TeamMembers/>
             </div>

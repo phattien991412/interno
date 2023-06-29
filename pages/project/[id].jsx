@@ -28,7 +28,7 @@ export default function Detail() {
   return (
     <>
       <div
-        style={{ backgroundImage: `url(/images/project-detail-banner.png)` }}
+        style={{ backgroundImage: `url(/images/project-detail-banner.webp)` }}
         className="relative bg-cover bg-center bg-no-repeat h-[50vh]"
       />
       <div className="w-[70%] mx-auto mt-36">
@@ -69,7 +69,7 @@ export default function Detail() {
             className={"rounded-mainRadius"}
             width={1200}
             height={1200}
-            src={"/images/project-img.png"}
+            src={"/images/project-img.webp"}
             alt={"project"}
           />
         </div>

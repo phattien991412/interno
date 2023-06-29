@@ -116,8 +116,10 @@ picture {
 }
 
 .blur-img {
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
+  pointer-events: none;
 }
 
 .blur-img::before {
@@ -127,6 +129,7 @@ picture {
   opacity: 0;
   animation: pulse 2.5s infinite;
   background-color: var(--text-color);
+  pointer-events: none;
 }
 
 @keyframes pulse {
@@ -149,6 +152,7 @@ picture {
 .blur-img img {
   opacity: 0;
   transition: opacity 250ms ease-in-out;
+  pointer-events: auto;
 }
 
 .blur-img.loaded img {

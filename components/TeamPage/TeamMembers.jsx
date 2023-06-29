@@ -10,56 +10,56 @@ const TeamMembers = () => {
       name: "Charlotte	Levi",
       desc: "Developer, Australia",
       phone: "+1 (378) 400-1234",
-      image: "/images/aboutpeople1.png",
+      image: "/images/aboutpeople1.webp",
       email: "levi@gmail.com"
     },
     {
       name: "Nattasha Julie",
       desc: "Design, Australia",
       phone: "+1 (378) 400-1234",
-      image: "/images/aboutpeople2.png",
+      image: "/images/aboutpeople2.webp",
       email: "julie@gmail.com"
     },
     {
       name: "Nora Owen",
       desc: "Design, Australia",
       phone: "+1 (378) 400-1234",
-      image: "/images/aboutpeople3.png",
+      image: "/images/aboutpeople3.webp",
       email: "owen@gmail.com"
     },
     {
       name: "John Smith",
       desc: "Design, Australia",
       phone: "+1 (378) 400-1234",
-      image: "/images/team1.png",
+      image: "/images/team1.webp",
       email: "owen@gmail.com"
     },
     {
       name: "Sofia Carter",
       desc: "Design, Australia",
       phone: "+1 (378) 400-1234",
-      image: "/images/team2.png",
+      image: "/images/team2.webp",
       email: "owen@gmail.com"
     },
     {
       name: "Avery Jackson",
       desc: "Design, Australia",
       phone: "+1 (378) 400-1234",
-      image: "/images/team3.png",
+      image: "/images/team3.webp",
       email: "owen@gmail.com"
     },
     {
       name: "Luna James",
       desc: "Design, Australia",
       phone: "+1 (378) 400-1234",
-      image: "/images/team4.png",
+      image: "/images/team4.webp",
       email: "owen@gmail.com"
     },
     {
       name: "Gianna Mateo",
       desc: "Design, Australia",
       phone: "+1 (378) 400-1234",
-      image: "/images/team5.png",
+      image: "/images/team5.webp",
       email: "owen@gmail.com"
     }
   ];

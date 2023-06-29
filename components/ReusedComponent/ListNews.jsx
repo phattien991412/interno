@@ -1,7 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+
 import { AiOutlineRight } from "react-icons/ai";
+
+import BlurredImage from "../LazyLoadingImage";
 
 const ListNews = ({ data }) => {
   return (
@@ -13,7 +15,7 @@ const ListNews = ({ data }) => {
         >
           <div className="m-5">
             <div className="relative">
-              <Image
+              <BlurredImage
                 className="rounded-tr-[40px] rounded-tl-[40px]"
                 width={200}
                 height={200}

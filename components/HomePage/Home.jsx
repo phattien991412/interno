@@ -1,23 +1,26 @@
 import React from "react";
 import Button from "../ReusedComponent/Button";
 import Link from "next/link";
+import BlurredImage from "../LazyLoadingImage";
 
 const Home = () => {
   return (
-    <div
-      style={{ backgroundImage: "url(/images/banner.png)" }}
-      className="relative bg-cover bg-center bg-no-repeat h-[80vh] rounded-[56px]"
-    >
+    <div className="relative ">
+      <BlurredImage
+        className={"bg-cover bg-center bg-no-repeat h-[80vh] rounded-[56px]"}
+        width={800}
+        height={800}
+        src={"/images/banner.webp"}
+        alt={"banner"}
+      />
       <div className="absolute top-1/2 -translate-y-1/2 left-10 lg:w-2/5 w-full lg:pr-0 pr-16">
-        <h1 className="lg:text-[65px] text-5xl">
-          Let Your Home Be Unique
-        </h1>
+        <h1 className="lg:text-[65px] text-5xl">Let Your Home Be Unique</h1>
         <p className="text-[#4D5053] text-[22px] leading-[150%] tracking-[0.22px] mt-[18px] mb-[21px]">
           There are many variations of the passages of lorem Ipsum
           fromavailable, majority.
         </p>
         <Link href={"/service"}>
-        <Button color={"#292F36"} icon={"#CDA274"} text={"Get Started"} />
+          <Button color={"#292F36"} icon={"#CDA274"} text={"Get Started"} />
         </Link>
       </div>
     </div>

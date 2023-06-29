@@ -132,8 +132,8 @@ const FaqPage = () => {
         <div>
             <Banner image={"/images/faq-banner.png"} page={"FAQ's"} />
             <div className="xl:w-[70%] w-[90%] mx-auto">
-               <FAQ  data={data} title={"Every Question Answered"} image={"/images/faq-img1.png"} />
-               <FAQ  data={data} title={"Project related questions"} image={"/images/faq-img2.png"} className={"flex-row-reverse"} />
+               <FAQ  data={data} title={"Every Question Answered"} image={"/images/faq-img1.webp"} />
+               <FAQ  data={data} title={"Project related questions"} image={"/images/faq-img2.webp"} className={"flex-row-reverse"} />
             </div>
         </div>
     );

@@ -1,28 +1,29 @@
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 import { AiOutlineRight } from "react-icons/ai";
-import Link from "next/link";
+
+import BlurredImage from "../LazyLoadingImage";
 
 const Project = () => {
   const data = [
     {
-      image: "/images/project1.png",
+      image: "/images/project1.webp",
       type: "Modern Kitchen",
       category: "Decor / Artchitecture"
     },
     {
-      image: "/images/project2.png",
+      image: "/images/project2.webp",
       type: "Modern Kitchen",
       category: "Decor / Artchitecture"
     },
     {
-      image: "/images/project3.png",
+      image: "/images/project3.webp",
       type: "Modern Kitchen",
       category: "Decor / Artchitecture"
     },
     {
-      image: "/images/project4.png",
+      image: "/images/project4.webp",
       type: "Modern Kitchen",
       category: "Decor / Artchitecture"
     }
@@ -41,7 +42,7 @@ const Project = () => {
         {data.map((item, index) => (
           <div className="mb-8 lg:mb-0" key={index}>
             <div>
-              <Image
+              <BlurredImage
                 className={`${index === 0 ? "rounded-tr-[40px]" : ""} ${
                   index === 1 ? "rounded-tl-[40px]" : ""
                 } ${index === 2 ? "rounded-br-[40px]" : ""} ${

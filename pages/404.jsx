@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 import Layout from "@/components/Layout";
 import Button from "@/components/ReusedComponent/Button";
+import BlurredImage from "@/components/LazyLoadingImage";
 
 export default function Page404() {
   return (
@@ -19,11 +19,11 @@ export default function Page404() {
         </Link>
       </div>
       <div className="h-[70vh]">
-        <Image
+        <BlurredImage
           className="rounded-bl-[300px]"
           width={500}
           height={300}
-          src={"/images/404.png"}
+          src={"/images/404.webp"}
           alt="404"
         />
       </div>

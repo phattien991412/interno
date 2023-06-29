@@ -11,7 +11,7 @@ const Banner = dynamic(() => import("../ReusedComponent/Banner"));
 const AboutPage = () => {
     return (
         <>
-            <Banner image={"/images/about-banner.png"} page={"About Us"} />
+            <Banner image={"/images/about-banner.webp"} page={"About Us"} />
             <div className="xl:w-[70%] w-[90%] mx-auto">
                 <Quotes/>
                 <DoResult/>
