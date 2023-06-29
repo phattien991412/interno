@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-import Layout from "@/Components/Layout";
+import Layout from "@/components/Layout";
 const TeamPage = dynamic(() => import("@/components/TeamPage"));
 
 export default function Team() {

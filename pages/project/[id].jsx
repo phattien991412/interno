@@ -1,4 +1,4 @@
-import Layout from "@/Components/Layout";
+import Layout from "@/components/Layout";
 import BlurredImage from "@/components/LazyLoadingImage";
 
 export default function Detail() {

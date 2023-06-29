@@ -1,4 +1,4 @@
-import Layout from "@/Components/Layout";
+import Layout from "@/components/Layout";
 import dynamic from "next/dynamic";
 const ProjectPage = dynamic(() => import("@/components/ProjectPage"));
 

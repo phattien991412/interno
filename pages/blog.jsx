@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-import Layout from "@/Components/Layout";
+import Layout from "@/components/Layout";
 const BlogPage = dynamic(() => import("@/components/BlogPage"));
 
 export default function Blog() {

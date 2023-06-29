@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-import Layout from "@/Components/Layout";
+import Layout from "@/components/Layout";
 const FaqPage = dynamic(() => import("@/components/FaqPage"));
 
 export default function Faq() {
