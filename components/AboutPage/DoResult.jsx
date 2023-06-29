@@ -40,8 +40,8 @@ const DoResult = () => {
             <div className="w-[90%] lg:w-[55%]">
               <BlurredImage
                 className="rounded-[40px]"
-                width={300}
-                height={200}
+                width={400}
+                height={400}
                 src={item.image}
                 alt={item.title}
               />

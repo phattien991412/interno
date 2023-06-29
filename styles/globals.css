@@ -394,3 +394,12 @@ picture {
   }
 }
 /* -------------------------------------------- */
+
+.ant-collapse-item {
+  margin: 2rem 0;
+  border-color: #cda274 !important;
+}
+
+.ant-drawer-content-wrapper {
+  width: 250px !important;
+}

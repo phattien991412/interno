@@ -1,11 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { Button, Drawer } from "antd";
+
 import { FaBars } from "react-icons/fa";
-import { FiSearch } from "react-icons/fi";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+  const [select, setSelect] = useState("Home");
+
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+
+  const nav = [
+    {
+      title: "Home",
+      link: "/"
+    },
+    {
+      title: "About Us",
+      link: "/about"
+    },
+    {
+      title: "Services",
+      link: "/service"
+    },
+    {
+      title: "Project",
+      link: "/project"
+    },
+    {
+      title: "Blog",
+      link: "/blog"
+    },
+    {
+      title: "Contact",
+      link: "/contact"
+    },
+    {
+      title: "FAQ",
+      link: "/faq"
+    }
+  ];
   return (
     <nav className="flex justify-between items-center my-10 xl:w-[70%] w-[90%] mx-auto">
       <Link href={"/"}>
@@ -23,31 +64,38 @@ const Header = () => {
         </div>
       </Link>
       <ul className="nav xl:flex gap-10 text-center items-center text-xl hidden">
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/about">About Us</Link>
-        </li>
-        <li>
-          <Link href="/service">Services</Link>
-        </li>
-        <li>
-          <Link href="/project">Project</Link>
-        </li>
-        <li>
-          <Link href="/blog">Blog</Link>
-        </li>
-        <li>
-          <Link href="/contact">Contact</Link>
-        </li>
-        {/* <li>
-          <FiSearch />
-        </li> */}
+        {nav.map((item) => (
+          <li
+            onClick={() => setSelect(item.title)}
+            className={`${
+              item.title === select && "border-b-2 border-primaryColor1"
+            }`}
+          >
+            <Link href={item.link}>{item.title}</Link>
+          </li>
+        ))}
       </ul>
-      <p className="xl:hidden block">
-        <FaBars />
-      </p>
+      <>
+        <p onClick={showDrawer} className="xl:hidden block">
+          <FaBars />
+        </p>
+
+        <Drawer
+          className="w-1/2 h-screen"
+          title="Basic Drawer"
+          placement="left"
+          onClose={onClose}
+          open={open}
+        >
+          <ul className=" text-xl ">
+            {nav.map((item) => (
+              <li className="my-4">
+                <Link href={item.link}>{item.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </Drawer>
+      </>
     </nav>
   );
 };

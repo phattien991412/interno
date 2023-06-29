@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import BlurredImage from "../LazyLoadingImage";
 import Masonry from "react-masonry-css";
 import { AiOutlineRight } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 const ListProject = () => {
   const [select, setSelect] = useState(1);
+  const route = useRouter();
 
   const listTitle = ["Bathroom", "Bed Room", "Kitchen", "Living Area"];
 
@@ -245,7 +247,10 @@ const ListProject = () => {
                 <h3>{item.title}</h3>
                 <p>{item.tag}</p>
               </div>
-              <p className="grid place-items-center w-[70px] h-[70px] rounded-full bg-primaryColor3">
+              <p
+                onClick={() => route.push("/project/detail")}
+                className="grid place-items-center w-[70px] h-[70px] rounded-full bg-primaryColor3 hover:bg-primaryColor1 hover:text-white cursor-pointer transition-all duration-500"
+              >
                 <AiOutlineRight />
               </p>
             </div>

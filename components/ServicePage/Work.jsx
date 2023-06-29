@@ -35,7 +35,7 @@ const Work = () => {
     }
   ];
   return (
-    <div className="my-32 bg-primaryColor3 pb-24 rounded-[70px]">
+    <div className="my-32 bg-primaryColor3 pb-24 rounded-mainRadius">
       <div className="text-center pt-32 pb-20 w-3/5 mx-auto">
         <h1>How We Work</h1>
         <p>

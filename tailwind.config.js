@@ -16,6 +16,9 @@ module.exports = {
         primaryColor1: "#CDA274",
         primaryColor2: "#292F36",
         primaryColor3: "#F4F0EC"
+      },
+      borderRadius: {
+        mainRadius: "70px"
       }
     }
   },
