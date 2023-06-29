@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
+
+import { gsap } from 'gsap/dist/gsap';
 
 import { Drawer } from "antd";
 
@@ -10,6 +12,8 @@ import BlurredImage from "../LazyLoadingImage";
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [select, setSelect] = useState("Home");
+  const headerRef = useRef();
+  const liRef = useRef([]);
 
   const showDrawer = () => {
     setOpen(true);
@@ -48,10 +52,28 @@ const Header = () => {
       link: "/faq"
     }
   ];
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(
+      () => {
+        let lis = gsap.utils.toArray("li");
+        gsap
+          .timeline({ defaults: { duration: 1.5 } })
+          .from(headerRef.current, { yPercent: -100, opacity: 0, ease: "back", delay: 3 })
+          .from(liRef.current, { opacity: 0, scale: 1, stagger: 0.2 });
+      },
+      headerRef,
+      liRef
+    );
+
+    return () => {
+      ctx.revert();
+    };
+  }, []);
   return (
     <nav className="flex justify-between items-center my-10 xl:w-[70%] w-[90%] mx-auto">
-      <Link href={"/"} passHref >
-        <div className="flex items-center gap-2 ">
+      <Link href={"/"} passHref>
+        <div ref={headerRef} className="flex items-center gap-2 ">
           <div className="cursor-pointer">
             <BlurredImage
               className="object-scale-down"
@@ -65,14 +87,22 @@ const Header = () => {
         </div>
       </Link>
       <ul className="nav xl:flex gap-10 text-center items-center text-xl hidden">
-        {nav.map((item) => (
+        {nav.map((item, index) => (
           <li
+            ref={(element) => {
+              if (element) {
+                liRef.current[index] = element;
+              }
+            }}
+            key={item.title}
             onClick={() => setSelect(item.title)}
             className={`${
               item.title === select && "border-b-2 border-primaryColor1"
             }`}
           >
-            <Link href={item.link} passHref >{item.title}</Link>
+            <Link href={item.link} passHref>
+              {item.title}
+            </Link>
           </li>
         ))}
       </ul>
@@ -90,8 +120,10 @@ const Header = () => {
         >
           <ul className=" text-xl ">
             {nav.map((item) => (
-              <li className="my-4">
-                <Link href={item.link} passHref >{item.title}</Link>
+              <li key={item.title} className="my-4">
+                <Link href={item.link} passHref>
+                  {item.title}
+                </Link>
               </li>
             ))}
           </ul>

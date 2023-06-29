@@ -1,7 +1,12 @@
-import Image from "next/image";
-import React from "react";
-import { AiOutlineRight } from "react-icons/ai";
+import React, { useLayoutEffect, useRef } from "react";
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 import ListNews from "../ReusedComponent/ListNews";
+import { SplitText } from "@/modules/SplitText";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Blog = () => {
   const data = [
@@ -24,17 +29,51 @@ const Blog = () => {
       design: "Interior Design"
     }
   ];
+
+  const blogRef = useRef();
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const matchMediaQuery = window.matchMedia("(min-width: 1200px)");
+      const startValue = matchMediaQuery.matches
+        ? "-10% center"
+        : "-10% center";
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: blogRef.current,
+            // containerAnimation: scrollTween,
+            start: startValue,
+            end: "20% 20%",
+            // markers: true,
+            toggleActions: "play none none none "
+          },
+          defaults: { duration: 1 }
+        })
+        .from(".character", { opacity: 0, scale: 1, stagger: 0.05 })
+        .from(".text", { opacity: 0, scale: 1.4, duration: 1, ease: "back" })
+        .from(".news", { opacity: 0, xPercent: 100, duration: 1, ease: "eslatic" });
+
+    }, blogRef);
+    return () => {
+      ctx.revert();
+    }; // cleanup
+  }, []);
   return (
-    <div className="my-32">
+    <div ref={blogRef} className="my-32">
       <div className="text-center mx-8 lg:mx-0 mb-[52px]">
-        <h1 >Articles & News</h1>
-        <p>
+        <h1>
+          <SplitText text={"Articles & News"} />
+        </h1>
+        <p className="text">
           It is a long established fact that a reader will be distracted by the
           of readable content of page lookings at its layouts points.
         </p>
       </div>
 
-     <ListNews data={data} />
+      <div className="news">
+        <ListNews data={data} />
+      </div>
     </div>
   );
 };

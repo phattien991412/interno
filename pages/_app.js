@@ -1,9 +1,12 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 
+import { gsap } from "gsap/dist/gsap";
+
 import "@/styles/globals.css";
-import Loading from "@/components/ReusedComponent/Loading";
+import LoadingStart from "@/components/ReusedComponent/LoadingStart";
+import LoadingRoute from "@/components/ReusedComponent/LoadingRoute";
 
 export default function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
@@ -12,6 +15,14 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.timeline({ defaults: { duration: 3 } }).to(loadingRef.current, {
+        delay: 2,
+        yPercent: -150,
+        ease: "power4.out"
+      });
+    }, loadingRef);
+
     const handleStart = () => {
       setIsLoading(true);
     };
@@ -24,12 +35,18 @@ export default function App({ Component, pageProps }) {
     router.events.on("routeChangeComplete", handleComplete);
     router.events.on("routeChangeError", handleComplete);
 
+
     return () => {
       router.events.off("routeChangeStart", handleStart);
       router.events.off("routeChangeComplete", handleComplete);
       router.events.off("routeChangeError", handleComplete);
+      ctx.revert(); // cleanup
     };
   }, []);
+
+  const loadingRef = useRef();
+
+  useEffect(() => {}, []);
   return (
     <>
       <Head>
@@ -40,7 +57,10 @@ export default function App({ Component, pageProps }) {
         <meta name="description" content="Metaversus Madness" />
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
       </Head>
-      {isLoading && <Loading />}
+      <div ref={loadingRef} className="preLoad">
+        <LoadingStart />
+      </div>
+      {isLoading && <LoadingRoute />}
       {getLayout(<Component {...pageProps} />)}
     </>
   );
