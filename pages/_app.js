@@ -17,7 +17,8 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.timeline({ defaults: { duration: 2 } }).to(loadingRef.current, {
+      gsap.timeline({ defaults: { duration: 3 } }).to(loadingRef.current, {
+        delay: 2,
         yPercent: -150,
         ease: "power4.out"
       });
