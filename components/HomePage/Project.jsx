@@ -53,23 +53,10 @@ const Project = () => {
             end: "20% 20%",
             // markers: true,
             toggleActions: "play none none none "
-          }
+          }, defaults: {stagger: 0.5}
         })
         .from(".character", { opacity: 0, scale: 1, stagger: 0.05 })
-        .from(".text", { opacity: 0, scale: 1.4, duration: 1, ease: "back" });
-
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: projectRef.current,
-            // containerAnimation: scrollTween,
-            start: "20% center",
-            end: "20% 20%",
-            // markers: true,
-            toggleActions: "play none none none "
-          },
-          defaults: { delay: 2 }
-        })
+        .from(".text", { opacity: 0, scale: 1.4, duration: 1, ease: "back" })
         .from(".content", {
           opacity: 0,
           yPercent: -50,
@@ -78,7 +65,6 @@ const Project = () => {
           ease: "back"
         });
 
-      // .from("button", { opacity: 0, scale: 1, stagger: 0.1 });
     }, projectRef);
     return () => {
       ctx.revert();

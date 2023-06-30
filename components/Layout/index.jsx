@@ -49,14 +49,17 @@ const Layout = ({ children }) => {
   }, [scrollPosition]);
 
   const handleToTop = () => {
-    document.body.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    }); // for safari
-    document.documentElement.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    const scrollDuration = 800; // Duration of the scroll animation in milliseconds
+    const scrollStep = -window.scrollY / (scrollDuration / 15); // Amount to scroll on each frame
+  
+    const scrollAnimation = () => {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+        requestAnimationFrame(scrollAnimation);
+      }
+    };
+  
+    requestAnimationFrame(scrollAnimation);
   };
   return (
     <div
