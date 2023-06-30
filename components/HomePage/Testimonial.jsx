@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 
 import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import BlurredImage from "../LazyLoadingImage";
 import { SplitText } from "@/modules/SplitText";
@@ -35,7 +35,9 @@ const Testimonial = () => {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       const matchMediaQuery = window.matchMedia("(min-width: 1200px)");
-      const startValue = matchMediaQuery.matches ? "-10% center" : "-10% center";
+      const startValue = matchMediaQuery.matches
+        ? "-10% center"
+        : "-10% center";
 
       gsap
         .timeline({
@@ -49,8 +51,8 @@ const Testimonial = () => {
           }
         })
         .from(".character", { opacity: 0, scale: 1, stagger: 0.03 })
-        .from(".content", { yPercent: 50 , opacity: 0, stagger: 0.2 });
-        
+        .from(".content", { yPercent: 50, opacity: 0, stagger: 0.2 });
+
       // .from("button", { opacity: 0, scale: 1, stagger: 0.1 });
     }, tesRef);
     return () => {
@@ -64,7 +66,10 @@ const Testimonial = () => {
       </h1>
       <div className="block lg:grid grid-cols-3 gap-4 m-8 pb-[88px]">
         {data.map((item) => (
-          <div className="content bg-white rounded-3xl p-8 mb-8 lg:mb-0" key={item.name}>
+          <div
+            className="content bg-white rounded-3xl p-8 mb-8 lg:mb-0"
+            key={item.name}
+          >
             <div className="flex items-center gap-8 pb-8">
               <div className="w-[15%]">
                 <BlurredImage

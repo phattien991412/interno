@@ -1,7 +1,7 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
 
-import { gsap } from 'gsap/dist/gsap';
+import { gsap } from "gsap/dist/gsap";
 
 import { Drawer } from "antd";
 
@@ -11,7 +11,7 @@ import BlurredImage from "../LazyLoadingImage";
 import { useRouter } from "next/router";
 
 const Header = () => {
-  const route = useRouter()
+  const route = useRouter();
   const [open, setOpen] = useState(false);
   const [select, setSelect] = useState(route.pathname);
   const headerRef = useRef();
@@ -55,13 +55,22 @@ const Header = () => {
     }
   ];
 
+  useEffect(() => {
+    setSelect(route.pathname);
+  }, [route.pathname]);
+
   useLayoutEffect(() => {
     let ctx = gsap.context(
       () => {
         let lis = gsap.utils.toArray("li");
         gsap
           .timeline({ defaults: { duration: 1.5 } })
-          .from(headerRef.current, { yPercent: -100, opacity: 0, ease: "back", delay: 3 })
+          .from(headerRef.current, {
+            yPercent: -100,
+            opacity: 0,
+            ease: "back",
+            delay: 3
+          })
           .from(liRef.current, { opacity: 0, scale: 1, stagger: 0.2 });
       },
       headerRef,

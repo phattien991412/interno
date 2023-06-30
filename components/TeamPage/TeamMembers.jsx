@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
+
+import { gsap } from "gsap/dist/gsap";
 
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineTwitter } from "react-icons/ai";
@@ -6,6 +8,22 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import BlurredImage from "../LazyLoadingImage";
 
 const TeamMembers = () => {
+  const teamRef = useRef();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap
+        .timeline({
+          defaults: { duration: 1, stagger: 0.5 }
+        })
+        .from(".team-member", { opacity: 0, scale: 1, yPercent: -50 });
+
+      // .from("button", { opacity: 0, scale: 1, ease: "back" });
+    }, teamRef);
+    return () => {
+      ctx.revert();
+    }; // cleanup
+  }, []);
   const data = [
     {
       name: "Charlotte	Levi",
@@ -65,9 +83,15 @@ const TeamMembers = () => {
     }
   ];
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center gap-12 mx-auto mt-16">
+    <div
+      ref={teamRef}
+      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center gap-12 mx-auto mt-16"
+    >
       {data.map((item) => (
-        <div key={item.name} className=" overflow-hidden mb-12 lg:mb-0 mx-auto">
+        <div
+          key={item.name}
+          className="team-member overflow-hidden mb-12 lg:mb-0 mx-auto"
+        >
           <div className="card-team rounded-[50px]">
             <BlurredImage
               className={"rounded-[50px] p-2"}

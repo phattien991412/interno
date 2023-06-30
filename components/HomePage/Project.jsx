@@ -67,9 +67,16 @@ const Project = () => {
             end: "20% 20%",
             // markers: true,
             toggleActions: "play none none none "
-          }
+          },
+          defaults: { delay: 2 }
         })
-        .from(".content", { opacity: 0, yPercent: -50, stagger: 0.5, ease: "back" })
+        .from(".content", {
+          opacity: 0,
+          yPercent: -50,
+          stagger: 0.5,
+          duration: 1.5,
+          ease: "back"
+        });
 
       // .from("button", { opacity: 0, scale: 1, stagger: 0.1 });
     }, projectRef);

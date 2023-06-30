@@ -36,7 +36,6 @@ export default function App({ Component, pageProps }) {
     router.events.on("routeChangeComplete", handleComplete);
     router.events.on("routeChangeError", handleComplete);
 
-
     return () => {
       router.events.off("routeChangeStart", handleStart);
       router.events.off("routeChangeComplete", handleComplete);
@@ -47,7 +46,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <SEO/>
+      <SEO />
       <div ref={loadingRef} className="preLoad">
         <LoadingStart />
       </div>

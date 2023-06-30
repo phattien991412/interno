@@ -33,7 +33,7 @@ const Articles = () => {
           defaults: { duration: 1, stagger: 0.5, ease: "eslatic" }
         })
         .from(".character", { opacity: 0, scale: 1, stagger: 0.05 })
-        .from(".list", {opacity: 0, scale: 1.4, ease: "back" })
+        .from(".list", { opacity: 0, scale: 1.4, ease: "back" });
     }, articleRef);
     return () => {
       ctx.revert();
@@ -82,9 +82,11 @@ const Articles = () => {
 
   return (
     <div ref={articleRef} className="mt-36">
-      <h1 className="pb-8"><SplitText text={"Articles & News"} /></h1>
+      <h1 className="pb-8">
+        <SplitText text={"Articles & News"} />
+      </h1>
       <div className="list">
-      <ListNews data={data} />
+        <ListNews data={data} />
       </div>
 
       <ul className="flex justify-center items-center gap-4 my-8">

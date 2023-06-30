@@ -31,8 +31,8 @@ const Work = () => {
         })
         .from(".character", { opacity: 0, scale: 1, stagger: 0.05 })
         .from(".text", { opacity: 0, scale: 1.4, duration: 1, ease: "back" })
-        .from(".content-left", {opacity: 0, xPercent: -100, scale: 1 })
-        .from(".content-right", {opacity: 0, xPercent: 100, scale: 1 })
+        .from(".content-left", { opacity: 0, xPercent: -100, scale: 1 })
+        .from(".content-right", { opacity: 0, xPercent: 100, scale: 1 });
     }, workRef);
     return () => {
       ctx.revert();
@@ -69,9 +69,14 @@ const Work = () => {
     }
   ];
   return (
-    <div ref={workRef} className="my-32 bg-primaryColor3 pb-24 rounded-mainRadius">
+    <div
+      ref={workRef}
+      className="my-32 bg-primaryColor3 pb-24 rounded-mainRadius"
+    >
       <div className="text-center pt-32 pb-20 w-3/5 mx-auto">
-        <h1><SplitText text={"How We Work"} /></h1>
+        <h1>
+          <SplitText text={"How We Work"} />
+        </h1>
         <p className="text">
           It is a long established fact that a reader will be distracted by the
           of readable content of page lookings at its layouts points.
@@ -80,13 +85,20 @@ const Work = () => {
       <>
         {data.map((item, index) => (
           <div
-            className={`${index % 2 === 0 ? "content-left" : "content-right"} flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24`}
+            className={`${
+              index % 2 === 0 ? "content-left" : "content-right"
+            } flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24`}
             key={item.title}
           >
             <div className="w-[90%] lg:w-1/2 px-16">
               <div className="flex justify-between items-center">
                 <div>
-                  <BlurredImage width={50} height={50} src={item.icon} alt="icon" />
+                  <BlurredImage
+                    width={50}
+                    height={50}
+                    src={item.icon}
+                    alt="icon"
+                  />
                 </div>
                 <p className="text-[120px] text-white"> 0{index + 1} </p>
               </div>

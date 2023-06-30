@@ -30,8 +30,8 @@ const LastestNews = () => {
           },
           defaults: { duration: 1, stagger: 0.5, ease: "eslatic" }
         })
-        .from(".content-left", {opacity: 0, xPercent: -100, scale: 1 })
-        .from(".content-right", {opacity: 0, xPercent: 100, scale: 1 })
+        .from(".content-left", { opacity: 0, xPercent: -100, scale: 1 })
+        .from(".content-right", { opacity: 0, xPercent: 100, scale: 1 });
     }, lastestRef);
     return () => {
       ctx.revert();
