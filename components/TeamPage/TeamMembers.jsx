@@ -1,8 +1,9 @@
 import React from "react";
-import BlurredImage from "../LazyLoadingImage";
+
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineTwitter } from "react-icons/ai";
-import { BsInstagram } from "react-icons/bs";
+
+import BlurredImage from "../LazyLoadingImage";
 
 const TeamMembers = () => {
   const data = [

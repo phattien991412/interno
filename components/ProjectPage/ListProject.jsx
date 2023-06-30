@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import BlurredImage from "../LazyLoadingImage";
-import Masonry from "react-masonry-css";
-import { AiOutlineRight } from "react-icons/ai";
 import { useRouter } from "next/router";
+
+import Masonry from "react-masonry-css";
+
+import { AiOutlineRight } from "react-icons/ai";
+
+import BlurredImage from "../LazyLoadingImage";
 
 const ListProject = () => {
   const [select, setSelect] = useState(1);

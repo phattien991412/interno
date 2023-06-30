@@ -1,10 +1,10 @@
-import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 
 import { gsap } from "gsap/dist/gsap";
 
 import "@/styles/globals.css";
+import SEO from "@/components/SEO";
 import LoadingStart from "@/components/ReusedComponent/LoadingStart";
 import LoadingRoute from "@/components/ReusedComponent/LoadingRoute";
 
@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }) {
 
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const loadingRef = useRef();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -44,19 +45,9 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
 
-  const loadingRef = useRef();
-
-  useEffect(() => {}, []);
   return (
     <>
-      <Head>
-        <title>Interno</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="Metaversus Madness" />
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-      </Head>
+      <SEO/>
       <div ref={loadingRef} className="preLoad">
         <LoadingStart />
       </div>

@@ -1,5 +1,6 @@
-import Layout from "@/components/Layout";
 import dynamic from "next/dynamic";
+
+import Layout from "@/components/Layout";
 const ProjectPage = dynamic(() => import("@/components/ProjectPage"));
 
 export default function Project() {

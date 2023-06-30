@@ -1,7 +1,8 @@
 import React from 'react';
+
+import Article from './Articles';
 import Banner from '../ReusedComponent/Banner';
 import LastestNews from './LastestNews';
-import Article from './Articles';
 
 const index = () => {
     return (

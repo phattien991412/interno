@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { AiOutlineRight } from "react-icons/ai";
 
 import BlurredImage from "../LazyLoadingImage";
-import { SplitText } from "@/modules/SplitText";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -1,6 +1,7 @@
 import React from "react";
-import Button from "../ReusedComponent/Button";
 import Link from "next/link";
+
+import Button from "../ReusedComponent/Button";
 
 const Contact = () => {
   return (

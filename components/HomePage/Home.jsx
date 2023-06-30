@@ -16,10 +16,10 @@ const Home = () => {
         .timeline({
           defaults: { duration: 1, stagger: 0.5 }
         })
-        .from(".banner", { opacity: 0, scale: 0, duration: 1.5})
+        .from(".banner", { opacity: 0, scale: 0, duration: 1.5 })
         .from(".character", { opacity: 0, scale: 1, stagger: 0.1 })
-        .from(".text", { opacity: 0, scale: 1.4 ,duration: 1, ease: "back" });
-      // .from("button", { opacity: 0, scale: 1, stagger: 0.1 });
+        .from(".text", { opacity: 0, scale: 1.4, duration: 1, ease: "back" })
+        // .from("button", { opacity: 0, scale: 1, ease: "back" });
     }, bannerRef);
     return () => {
       ctx.revert();

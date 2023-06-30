@@ -1,7 +1,9 @@
 import React from 'react';
-import Banner from '../ReusedComponent/Banner';
+
 import Form from './Form';
 import Map from './Map';
+
+import Banner from '../ReusedComponent/Banner';
 
 const ContactPage = () => {
     return (

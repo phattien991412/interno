@@ -1,6 +1,7 @@
 import React from 'react';
-import Banner from '../ReusedComponent/Banner';
+
 import TeamMembers from './TeamMembers';
+import Banner from '../ReusedComponent/Banner';
 
 const TeamPage = () => {
     return (
