@@ -9,7 +9,8 @@
   <li>About Us</li>
   <li>Blog</li>
   <li>Services</li>
-  <li>Services Single</li>
+  <li>Our Project</li>
+  <li>Project Detail</li>
   <li>Contact Us</li>
   <li>Professionals</li>
   <li>Pricing Plan</li>
