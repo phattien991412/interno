@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
 import React from 'react';
 
-const Article = dynamic(() => import("'./Articles'")) ;
-const Banner = dynamic(() => import("'../ReusedComponent/Banner'")) ;
-const LastestNews = dynamic(() => import("'./LastestNews'")) ;
+const Article = dynamic(() => import("./Articles")) ;
+const Banner = dynamic(() => import("../ReusedComponent/Banner")) ;
+const LastestNews = dynamic(() => import("./LastestNews")) ;
 
 const index = () => {
     return (
