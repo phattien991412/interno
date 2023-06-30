@@ -1,20 +1,21 @@
-import React from 'react';
+import dynamic from "next/dynamic";
+import React from "react";
 
-import Form from './Form';
-import Map from './Map';
+const Form = dynamic(() => import("./Form"));
+const Map = dynamic(() => import("./Map"));
 
-import Banner from '../ReusedComponent/Banner';
+const Banner = dynamic(() => import("../ReusedComponent/Banner"));
 
 const ContactPage = () => {
-    return (
-        <div>
-            <Banner image={"/images/contact-banner.webp"} page={"Contact Us"}/>
-            <div className="xl:w-[70%] w-[90%] mx-auto">
-               <Form/>
-               <Map/>
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <Banner image={"/images/contact-banner.webp"} page={"Contact Us"} />
+      <div className="xl:w-[70%] w-[90%] mx-auto">
+        <Form />
+        <Map />
+      </div>
+    </div>
+  );
 };
 
 export default ContactPage;

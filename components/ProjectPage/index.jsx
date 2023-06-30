@@ -1,6 +1,8 @@
+import dynamic from 'next/dynamic';
 import React from 'react';
-import Banner from '../ReusedComponent/Banner';
-import ListProject from './ListProject';
+
+const Banner = dynamic(() => import('../ReusedComponent/Banner')) ;
+const ListProject = dynamic(() => import('./ListProject')) ;
 
 const Project = () => {
     return (

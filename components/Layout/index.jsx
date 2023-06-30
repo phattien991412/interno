@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 
 import { gsap } from "gsap/dist/gsap";
 
-import Header from "./Header";
-import Footer from "./Footer";
+const Header = dynamic(() => import("./Header"));
+const Footer = dynamic(() => import("./Footer"));
+
 import { AiOutlineArrowUp } from "react-icons/ai";
 
 const Layout = ({ children }) => {
@@ -51,14 +53,14 @@ const Layout = ({ children }) => {
   const handleToTop = () => {
     const scrollDuration = 800; // Duration of the scroll animation in milliseconds
     const scrollStep = -window.scrollY / (scrollDuration / 15); // Amount to scroll on each frame
-  
+
     const scrollAnimation = () => {
       if (window.scrollY !== 0) {
         window.scrollBy(0, scrollStep);
         requestAnimationFrame(scrollAnimation);
       }
     };
-  
+
     requestAnimationFrame(scrollAnimation);
   };
   return (
