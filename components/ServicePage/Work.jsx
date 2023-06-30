@@ -87,7 +87,7 @@ const Work = () => {
           <div
             className={`${
               index % 2 === 0 ? "content-left" : "content-right"
-            } flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24`}
+            } flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24 px-24`}
             key={item.title}
           >
             <div className="w-[90%] lg:w-1/2 px-16">
