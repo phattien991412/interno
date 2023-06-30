@@ -8,10 +8,12 @@ import { Drawer } from "antd";
 import { FaBars } from "react-icons/fa";
 
 import BlurredImage from "../LazyLoadingImage";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const route = useRouter()
   const [open, setOpen] = useState(false);
-  const [select, setSelect] = useState("Home");
+  const [select, setSelect] = useState(route.pathname);
   const headerRef = useRef();
   const liRef = useRef([]);
 
@@ -72,7 +74,7 @@ const Header = () => {
   }, []);
   return (
     <nav className="flex justify-between items-center my-10 xl:w-[70%] w-[90%] mx-auto">
-      <Link href={"/"} passHref>
+      <Link href={"/"} onClick={() => setSelect("/")} passHref>
         <div ref={headerRef} className="flex items-center gap-2 ">
           <div className="cursor-pointer">
             <BlurredImage
@@ -95,9 +97,9 @@ const Header = () => {
               }
             }}
             key={item.title}
-            onClick={() => setSelect(item.title)}
+            onClick={() => setSelect(item.link)}
             className={`${
-              item.title === select && "border-b-2 border-primaryColor1"
+              item.link === select && "border-b-2 border-primaryColor1"
             }`}
           >
             <Link href={item.link} passHref>

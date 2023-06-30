@@ -60,7 +60,7 @@ const Blog = () => {
     }; // cleanup
   }, []);
   return (
-    <div ref={blogRef} className="my-32">
+    <div ref={blogRef} className="my-32 overflow-x-hidden">
       <div className="text-center mx-8 lg:mx-0 mb-[52px]">
         <h1>
           <SplitText text={"Articles & News"} />

@@ -73,23 +73,23 @@ const Count = () => {
     }; // cleanup
   }, []);
   return (
-    <div ref={countRef} className="w-full bg-primaryColor3">
+    <div ref={countRef} className="w-full bg-primaryColor3 overflow-x-hidden">
       <table className="w-[80%] lg:w-[60%] mx-auto py-16 border-separate text-center">
         <tbody>
           <tr>
             {data.map((item, index) => (
-              <td key={item.text} className="border-r border-primaryColor1">
+              <td key={item.text} className="border-r border-primaryColor1 px-4">
                 <p
                   ref={(element) => {
                     if (element) {
                       countUpRef.current[index] = element;
                     }
                   }}
-                  className="text-5xl lg:text-[85px] text-primaryColor1"
+                  className="text-3xl md:text-5xl lg:text-[85px] text-primaryColor1"
                 >
                   {item.number}
                 </p>
-                <p>{item.text}</p>
+                <p className="text-base md:text-[22px ]" >{item.text}</p>
               </td>
             ))}
           </tr>

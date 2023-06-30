@@ -6,7 +6,7 @@ import Map from './Map';
 const ContactPage = () => {
     return (
         <div>
-            <Banner image={"/images/contact-banner.png"} page={"Contact Us"}/>
+            <Banner image={"/images/contact-banner.webp"} page={"Contact Us"}/>
             <div className="xl:w-[70%] w-[90%] mx-auto">
                <Form/>
                <Map/>

@@ -1,13 +1,48 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
+import Link from "next/link";
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import { BsInstagram } from "react-icons/bs";
 import { AiOutlineArrowRight, AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 import BlurredImage from "../LazyLoadingImage";
-import Link from "next/link";
+import { SplitText } from "@/modules/SplitText";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Team = () => {
+  const teamRef = useRef();
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const matchMediaQuery = window.matchMedia("(min-width: 1200px)");
+      const startValue = matchMediaQuery.matches
+        ? "-10% center"
+        : "-10% center";
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: teamRef.current,
+            // containerAnimation: scrollTween,
+            start: startValue,
+            end: "20% 20%",
+            // markers: true,
+            toggleActions: "play none none none "
+          },
+          defaults: { duration: 1, stagger: 0.5, ease: "eslatic" }
+        })
+        .from(".character", { opacity: 0, scale: 1, stagger: 0.05 })
+        .from(".team", {opacity: 0, yPercent: 100, scale: 1 })
+        .from(".readmore", {opacity: 0, yPercent: 100, scale: 1 })
+    }, teamRef);
+    return () => {
+      ctx.revert();
+    }; // cleanup
+  }, []);
+
   const data = [
     {
       name: "Charlotte	Levi",
@@ -32,11 +67,11 @@ const Team = () => {
     }
   ];
   return (
-    <div className="bg-primaryColor3 w-full">
+    <div ref={teamRef} className="bg-primaryColor3 w-full">
       <div className="p-8 lg:p-28">
-        <h1 className="text-center">Our Professional Team</h1>
+        <h1 className="text-center"><SplitText text={"Our Professional Team"} /></h1>
 
-        <div className="block lg:flex justify-between items-center gap-12 w-[90%] xl:w-[70%] mx-auto mt-16">
+        <div className="team block lg:flex justify-between items-center gap-12 w-[90%] xl:w-[70%] mx-auto mt-16">
           {data.map((item) => (
             <div
               key={item.name}

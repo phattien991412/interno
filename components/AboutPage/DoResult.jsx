@@ -1,10 +1,44 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
+import Link from "next/link";
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import BlurredImage from "../LazyLoadingImage";
 import Button from "../ReusedComponent/Button";
-import Link from "next/link";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const DoResult = () => {
+  const doresultRef = useRef();
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const matchMediaQuery = window.matchMedia("(min-width: 1200px)");
+      const startValue = matchMediaQuery.matches
+        ? "-10% center"
+        : "-10% center";
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: doresultRef.current,
+            // containerAnimation: scrollTween,
+            start: startValue,
+            end: "20% 20%",
+            // markers: true,
+            toggleActions: "play none none none "
+          },
+          defaults: { duration: 1, stagger: 0.5, ease: "eslatic" }
+        })
+        .from(".content-left", {opacity: 0, xPercent: -100, scale: 1 })
+        .from(".content-right", {opacity: 0, xPercent: 100, scale: 1 })
+
+    }, doresultRef);
+    return () => {
+      ctx.revert();
+    }; // cleanup
+  }, []);
+
   const data = [
     {
       title: "What We Do",
@@ -22,11 +56,11 @@ const DoResult = () => {
     }
   ];
   return (
-    <div className="my-32">
+    <div ref={doresultRef} className="my-32">
       <>
-        {data.map((item) => (
+        {data.map((item, index) => (
           <div
-            className="flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24"
+            className={`${index % 2 === 0 ? "content-left" : "content-right"} flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24`}
             key={item.title}
           >
             <div className="w-[90%] lg:w-[45%] px-16">

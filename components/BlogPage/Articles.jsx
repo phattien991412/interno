@@ -1,8 +1,44 @@
-import React from "react";
-import ListNews from "../ReusedComponent/ListNews";
+import React, { useLayoutEffect, useRef } from "react";
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 import { AiOutlineRight } from "react-icons/ai";
 
+import ListNews from "../ReusedComponent/ListNews";
+import { SplitText } from "@/modules/SplitText";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Articles = () => {
+  const articleRef = useRef();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const matchMediaQuery = window.matchMedia("(min-width: 1200px)");
+      const startValue = matchMediaQuery.matches
+        ? "-10% center"
+        : "-10% center";
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: articleRef.current,
+            // containerAnimation: scrollTween,
+            start: startValue,
+            end: "20% 20%",
+            markers: true,
+            toggleActions: "play none none none "
+          },
+          defaults: { duration: 1, stagger: 0.5, ease: "eslatic" }
+        })
+        .from(".character", { opacity: 0, scale: 1, stagger: 0.05 })
+        .from(".list", {opacity: 0, scale: 1.4, ease: "back" })
+    }, articleRef);
+    return () => {
+      ctx.revert();
+    }; // cleanup
+  }, []);
   const data = [
     {
       image: "/images/article1.webp",
@@ -45,9 +81,11 @@ const Articles = () => {
   const listNum = ["01", "02", "03", <AiOutlineRight />];
 
   return (
-    <div className="mt-36">
-      <h1 className="pb-8">Articles & News</h1>
+    <div ref={articleRef} className="mt-36">
+      <h1 className="pb-8"><SplitText text={"Articles & News"} /></h1>
+      <div className="list">
       <ListNews data={data} />
+      </div>
 
       <ul className="flex justify-center items-center gap-4 my-8">
         {listNum.map((item) => (

@@ -1,7 +1,43 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 import BlurredImage from "../LazyLoadingImage";
+import { SplitText } from "@/modules/SplitText";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
+  const workRef = useRef();
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const matchMediaQuery = window.matchMedia("(min-width: 1200px)");
+      const startValue = matchMediaQuery.matches
+        ? "-10% center"
+        : "-10% center";
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: workRef.current,
+            // containerAnimation: scrollTween,
+            start: startValue,
+            end: "20% 20%",
+            // markers: true,
+            toggleActions: "play none none none "
+          },
+          defaults: { duration: 1, stagger: 0.5, ease: "eslatic" }
+        })
+        .from(".character", { opacity: 0, scale: 1, stagger: 0.05 })
+        .from(".text", { opacity: 0, scale: 1.4, duration: 1, ease: "back" })
+        .from(".content-left", {opacity: 0, xPercent: -100, scale: 1 })
+        .from(".content-right", {opacity: 0, xPercent: 100, scale: 1 })
+    }, workRef);
+    return () => {
+      ctx.revert();
+    }; // cleanup
+  }, []);
   const data = [
     {
       title: "Concept & Details",
@@ -33,10 +69,10 @@ const Work = () => {
     }
   ];
   return (
-    <div className="my-32 bg-primaryColor3 pb-24 rounded-mainRadius">
+    <div ref={workRef} className="my-32 bg-primaryColor3 pb-24 rounded-mainRadius">
       <div className="text-center pt-32 pb-20 w-3/5 mx-auto">
-        <h1>How We Work</h1>
-        <p>
+        <h1><SplitText text={"How We Work"} /></h1>
+        <p className="text">
           It is a long established fact that a reader will be distracted by the
           of readable content of page lookings at its layouts points.
         </p>
@@ -44,7 +80,7 @@ const Work = () => {
       <>
         {data.map((item, index) => (
           <div
-            className="flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24"
+            className={`${index % 2 === 0 ? "content-left" : "content-right"} flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24`}
             key={item.title}
           >
             <div className="w-[90%] lg:w-1/2 px-16">

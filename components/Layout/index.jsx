@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const Layout = ({ children }) => {
   const route = useRouter();
   return (
-    <div>
+    <div className="w-screen max-w-screen-[100vw] overflow-x-hidden">
       <Header />
       <main>{children}</main>
       {route.pathname !== "/404" && <Footer />}

@@ -15,12 +15,12 @@ const ListProject = () => {
       type: "Bathroom",
       data: [
         {
-          image: "/images/project1.1.png",
+          image: "/images/project1.1.webp",
           title: "Minimal Bathroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project1.1.png",
+          image: "/images/project1.1.webp",
           title: "Minimal Bathroom",
           tag: "Decor / Artchitecture"
         },
@@ -65,12 +65,12 @@ const ListProject = () => {
       type: "Bed Room",
       data: [
         {
-          image: "/images/project1.1.png",
+          image: "/images/project1.1.webp",
           title: "Minimal Bedroom",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project1.1.png",
+          image: "/images/project1.1.webp",
           title: "Minimal Bedroom",
           tag: "Decor / Artchitecture"
         },
@@ -160,12 +160,12 @@ const ListProject = () => {
       type: "Living Area",
       data: [
         {
-          image: "/images/project1.1.png",
+          image: "/images/project1.1.webp",
           title: "Minimal Living Area",
           tag: "Decor / Artchitecture"
         },
         {
-          image: "/images/project1.1.png",
+          image: "/images/project1.1.webp",
           title: "Minimal Living Area",
           tag: "Decor / Artchitecture"
         },
