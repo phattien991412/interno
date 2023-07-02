@@ -73,7 +73,7 @@ const Work = () => {
       ref={workRef}
       className="my-32 bg-primaryColor3 pb-24 rounded-mainRadius"
     >
-      <div className="text-center pt-32 pb-20 w-3/5 mx-auto">
+      <div className="text-center pt-32 pb-20 lg:w-3/5 lg:px-0 px-4 mx-auto">
         <h1>
           <SplitText text={"How We Work"} />
         </h1>
@@ -87,10 +87,10 @@ const Work = () => {
           <div
             className={`${
               index % 2 === 0 ? "content-left" : "content-right"
-            } flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24 px-24`}
+            } block lg:flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24 lg:px-24 px-8 `}
             key={item.title}
           >
-            <div className="w-[90%] lg:w-1/2 px-16">
+            <div className="w-[90%] lg:w-1/2 lg:px-16">
               <div className="flex justify-between items-center">
                 <div>
                   <BlurredImage

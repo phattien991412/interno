@@ -10,12 +10,12 @@ const FAQ = ({ data, className, image, title }) => {
   };
   return (
     <div>
-      <h1 className="text-center mt-36">{title}</h1>
+      <h1 className="text-4xl lg:text-[50px] text-center mt-20 lg:mt-36">{title}</h1>
 
       <div className={`${className} block lg:flex justify-between items-center mt-16`}>
         <div className="w-[90%] mx-auto lg:w-1/2">
           <Collapse
-            className="px-10 bg-transparent border-none"
+            className="lg:px-10 bg-transparent border-none"
             items={data}
             onChange={onChange}
           />

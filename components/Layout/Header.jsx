@@ -57,6 +57,7 @@ const Header = () => {
 
   useEffect(() => {
     setSelect(route.pathname);
+    setOpen(false);
   }, [route.pathname]);
 
   useLayoutEffect(() => {
@@ -124,7 +125,22 @@ const Header = () => {
 
         <Drawer
           className="w-1/2 h-screen"
-          title="Interno"
+          title={
+            <Link href={"/"} onClick={() => setSelect("/")} passHref>
+              <div className="flex items-center gap-2 ">
+                <div className="cursor-pointer">
+                  <BlurredImage
+                    className="object-scale-down"
+                    width={30}
+                    height={30}
+                    src="/images/logo.webp"
+                    alt="logo"
+                  />
+                </div>
+                <h2 className="text-[40px] font-semibold">Interno</h2>
+              </div>
+            </Link>
+          }
           placement="left"
           onClose={onClose}
           open={open}

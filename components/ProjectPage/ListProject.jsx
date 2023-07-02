@@ -219,13 +219,13 @@ const ListProject = () => {
   };
   return (
     <div>
-      <ul className="flex justify-center gap-4 lg:gap-8 w-fit mx-auto mt-32 mb-16 border border-primaryColor1 rounded-[18px]">
+      <ul className="flex justify-center items-center  gap-4 lg:gap-8 w-fit lg:mx-auto mt-32 mb-16 border border-primaryColor1 rounded-[18px]">
         {listTitle.map((item, index) => (
           <li
             onClick={() => setSelect(index)}
             className={`${
               select === index && "bg-primaryColor1 text-white rounded-[18px]"
-            } px-4 lg:px-8 py-4 cursor-pointer`}
+            } px-2 py-2 lg:px-8 lg:py-4 cursor-pointer`}
             key={item}
           >
             {item}

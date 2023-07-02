@@ -7,7 +7,7 @@ const MailBox = () => {
     <div className="my-32">
       <h1 className="text-center w-[90%] lg:w-1/2 mx-auto">Creative project? Let's have a productive talk.</h1>
 
-      <form className="mt-12 w-3/5 mx-auto" action="">
+      <form className="mt-12 lg:w-3/5 mx-auto" action="">
         <div className="flex justify-center gap-12 ">
             <input className="border-b-2 border-gray-400 outline-none w-1/2 text-lg" type="text" placeholder="Name" />
             <input className="border-b-2 border-gray-400 outline-none w-1/2 text-lg" type="email" placeholder="Email" />

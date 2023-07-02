@@ -9,7 +9,7 @@ import BlurredImage from "../LazyLoadingImage";
 const Footer = () => {
   return (
     <div className="mt-32 w-[90%] xl:w-[70%] mx-auto">
-      <div className="grid grid-cols-5 gap-8 px-12">
+      <div className="grid grid-cols-5 gap-8 lg:px-12">
         <div className="col-span-5 md:col-span-2">
           <div className="flex items-center gap-2 ">
             <div>

@@ -27,7 +27,7 @@ const Articles = () => {
             // containerAnimation: scrollTween,
             start: startValue,
             end: "20% 20%",
-            markers: true,
+            // markers: true,
             toggleActions: "play none none none "
           },
           defaults: { duration: 1, stagger: 0.5, ease: "eslatic" }

@@ -60,10 +60,10 @@ const DoResult = () => {
       <>
         {data.map((item, index) => (
           <div
-            className={`${index % 2 === 0 ? "content-left" : "content-right"} flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse mb-24`}
+            className={`${index % 2 === 0 ? "content-left" : "content-right"} flex lg:justify-between flex-wrap lg:flex-nowrap items-center lg:even:flex-row-reverse lg:mb-0         mb-24`}
             key={item.title}
           >
-            <div className="w-[90%] lg:w-[45%] px-16">
+            <div className="w-[90%] lg:w-[45%] lg:px-16">
               <h1>{item.title}</h1>
               <p className="py-8">{item.text}</p>
 
@@ -71,7 +71,7 @@ const DoResult = () => {
                 <Button color={"#292F36"} icon={"#CDA274"} text={item.tags} />
               </Link>
             </div>
-            <div className="w-[90%] lg:w-[55%]">
+            <div className="w-[90%] lg:w-[55%] lg:mt-0 mt-12">
               <BlurredImage
                 className="rounded-[40px]"
                 width={400}

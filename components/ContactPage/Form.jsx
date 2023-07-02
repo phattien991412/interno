@@ -9,8 +9,8 @@ import Button from "../ReusedComponent/Button";
 
 const Form = () => {
   return (
-    <div className="mt-36">
-      <h1 className="w-[90%] lg:w-3/5 mx-auto text-center">We love meeting new people and helping them.</h1>
+    <div className="mt-20 lg:mt-36">
+      <h1 className="w-[90%] lg:w-3/5 mx-auto text-4xl lg:text-[50px] text-center">We love meeting new people and helping them.</h1>
 
       <div className="block lg:flex items-center gap-12 mt-12 lg:mt-0">
         <div className="bg-primaryColor3 rounded-[50px] p-16">
