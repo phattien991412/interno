@@ -21,7 +21,9 @@ const Layout = ({ children }) => {
     let ctx = gsap.context(() => {
       toTopRef.current = gsap.to(".totop", {
         opacity: 1,
-        duration: 1.5,
+        duration: 1,
+        pointerEvents: "auto",
+        cursor: "pointer",
         ease: "eslatic"
       });
     }, layoutRef);
@@ -66,13 +68,13 @@ const Layout = ({ children }) => {
   return (
     <div
       ref={layoutRef}
-      className="w-screen max-w-screen-[100vw] overflow-x-hidden"
+      className="flex flex-col w-screen max-w-screen-[100vw] overflow-x-hidden"
     >
       <Header />
-      <main>{children}</main>
+      <main className="flex-grow-1">{children}</main>
       <div
         onClick={handleToTop}
-        className="totop opacity-0 grid place-items-center w-14 h-14 rounded-full bg-primaryColor1 text-white text-3xl fixed right-10 bottom-20 cursor-pointer hover:bg-[#efbd88]"
+        className="totop opacity-0 pointer-events-none cursor-none grid place-items-center w-14 h-14 rounded-full bg-primaryColor1 text-white text-3xl fixed right-10 bottom-20 hover:bg-[#efbd88]"
       >
         <AiOutlineArrowUp />
       </div>

@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
     const ctx = gsap.context(() => {
       gsap.timeline({ defaults: { duration: 3 } }).to(loadingRef.current, {
         delay: 2,
-        yPercent: -150,
+        yPercent: -120,
         ease: "power4.out"
       });
     }, loadingRef);

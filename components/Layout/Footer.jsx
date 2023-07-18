@@ -45,20 +45,20 @@ const Footer = () => {
 
         <div className="md:col-span-1 col-span-3">
           <h3>Pages</h3>
-          <ul>
-            <li className="my-6 cursor-pointer hover:underline">
+          <ul className="nav">
+            <li className="my-6 w-fit">
               <p>About Us</p>
             </li>
-            <li className="my-6 cursor-pointer hover:underline">
+            <li className="my-6 w-fit">
               <p>Our Projects</p>
             </li>
-            <li className="my-6 cursor-pointer hover:underline">
+            <li className="my-6 w-fit">
               <p>Our Team</p>
             </li>
-            <li className="my-6 cursor-pointer hover:underline">
+            <li className="my-6 w-fit">
               <p>Contact Us</p>
             </li>
-            <li className="my-6 cursor-pointer hover:underline">
+            <li className="my-6 w-fit">
               <p>Services</p>
             </li>
           </ul>
@@ -66,20 +66,20 @@ const Footer = () => {
 
         <div className="md:col-span-1 col-span-2">
           <h3>Services</h3>
-          <ul>
-            <li className="my-6 cursor-pointer hover:underline">
+          <ul className="nav">
+            <li className="my-6 w-fit">
               <p>Kitchen</p>
             </li>
-            <li className="my-6 cursor-pointer hover:underline">
+            <li className="my-6 w-fit">
               <p>Living Area</p>
             </li>
-            <li className="my-6 cursor-pointer hover:underline">
+            <li className="my-6 w-fit">
               <p>Bathroom</p>
             </li>
-            <li className="my-6 cursor-pointer hover:underline">
+            <li className="my-6 w-fit">
               <p>Dinning Hall</p>
             </li>
-            <li className="my-6 cursor-pointer hover:underline">
+            <li className="my-6 w-fit">
               <p>Bedroom</p>
             </li>
           </ul>
@@ -87,11 +87,11 @@ const Footer = () => {
 
         <div className="md:col-span-1 col-span-2">
           <h3>Contact</h3>
-          <p className="my-6">55 East Birchwood Ave. Brooklyn, New York 11201</p>
-          <a className="my-6" href="mailto:contact@interno.com">
+          <p className="my-6 readmore">55 East Birchwood Ave. Brooklyn, New York 11201</p>
+          <a className="my-6 readmore" href="mailto:contact@interno.com">
             <p>contact@interno.com</p>
           </a>
-          <a className="my-6" href="tel:+1234567890">
+          <a className="my-6 readmore" href="tel:+1234567890">
             <p>(123) 456 - 7890</p>
           </a>
         </div>

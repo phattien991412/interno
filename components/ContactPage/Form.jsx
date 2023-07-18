@@ -18,21 +18,21 @@ const Form = () => {
             <p className="grid place-items-center w-12 h-12 rounded-full bg-white text-primaryColor1">
               <AiOutlineMail />
             </p>
-            <a href="#">info@yourdomain.com</a>
+            <a className="readmore" href="#">info@yourdomain.com</a>
           </div>
 
           <div className="flex gap-4 items-center my-8">
             <p className="grid place-items-center w-12 h-12 rounded-full bg-white text-primaryColor1">
               <BsTelephone />
             </p>
-            <a href="#">+1 (378) 400-1234</a>
+            <a className="readmore" href="#">+1 (378) 400-1234</a>
           </div>
 
           <div className="flex gap-4 items-center">
             <p className="grid place-items-center w-12 h-12 rounded-full bg-white text-primaryColor1">
               <IoEarthOutline />
             </p>
-            <a href="#" >www.yourdomain.com</a>
+            <a className="readmore" href="#" >www.yourdomain.com</a>
           </div>
 
           <ul className="flex items-center gap-12 my-8 text-2xl">
