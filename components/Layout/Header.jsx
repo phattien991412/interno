@@ -109,7 +109,7 @@ const Header = () => {
             key={item.title}
             onClick={() => setSelect(item.link)}
             className={`${
-              item.link === select && "scale-100"
+              item.link === select ? "selected" : ""
             }`}
           >
             <Link href={item.link} passHref>

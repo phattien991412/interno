@@ -119,6 +119,12 @@ picture {
   }
 }
 
+.nav .selected {
+  &::before {
+    scale: 1;
+  }
+}
+
 .blur-img {
   position: relative;
   background-repeat: no-repeat;
